@@ -5,14 +5,33 @@
 <body><hr /><div class="dropdown">
     <button onclick="myFunction()" class="dropbtn">Genre</button>
     <div id="myDropdown" class="dropdown-content">
-        <a href="#">Drama</a>
-        <a href="#">Action</a>
-        <a href="#">Sci-fi</a>
+        <p>Drama</p>
+        <p>Action</p>
+        <p>Sci-fi</p>
     </div>
 </div>
 
 <input id="Text1" type="text" placeholder="Book Title"  /><textarea id="TextArea1" rows="2" placeholder="Review" cols="20"></textarea><input id="Submit1" type="submit" value="submit" /> 
-<script type="text/javascript" src="DropdownMenu.js"></script></body><hr />
+<script> /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}</script></body><hr />
 </html>
 
 
