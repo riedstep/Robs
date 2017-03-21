@@ -1,37 +1,17 @@
 ﻿<!DOCTYPE html>
+@{
+    ViewBag.Title = "Index";
+
+}
 <html>
 <head><link href="Site.css" rel="stylesheet" type="text/css">
 </head><hr />
-<body><hr /><div class="dropdown">
-    <button onclick="myFunction()" class="dropbtn">Genre</button>
-    <div id="myDropdown" class="dropdown-content">
-        <p>Drama</p>
-        <p>Action</p>
-        <p>Sci-fi</p>
-    </div>
-</div>
-
-<input id="Text1" type="text" placeholder="Book Title"  /><textarea id="TextArea1" rows="2" placeholder="Review" cols="20"></textarea><input id="Submit1" type="submit" value="submit" /> 
-<script> /* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}</script></body><hr />
+<body><select id="Select1">
+    <option>test 1</option>
+    <option>test 2</option>
+    <option>test 3</option>
+    <option>test 4</option>
+</select></body><hr />
 </html>
 
 
