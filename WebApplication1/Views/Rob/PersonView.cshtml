@@ -1,0 +1,13 @@
+﻿@model WebApplication1.Models.Person
+@{
+    ViewBag.Title = "PersonView";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+<h2>PersonView</h2>
+
+<h3>Person Information</h3>
+@Model.FirstName<br />
+@Model.LastName<br />
+@Model.TwitterHandle<br />
+
